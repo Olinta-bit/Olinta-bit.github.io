@@ -24339,7 +24339,7 @@ var SimpleGit = class extends GitManager {
     const remoteChangedFiles = (await this.git.diffSummary([currentBranch2, trackingBranch, "--"], (err) => this.onError(err))).changed;
     this.plugin.setState(PluginState.push);
     if (this.plugin.settings.updateSubmodules) {
-      await this.git.env({ ...process.env, "OBSIDIAN_GIT": 1 }).subModule(["foreach", "--recursive", `tracking=$(git for-each-ref --format='%(upstream:short)' "$(git symbolic-ref -q HEAD)"); echo $tracking; if [ ! -z "$(git diff --shortstat $tracking)" ]; then git push; fi`], (err) => this.onError(err));
+      await this.git.env({ ...process.env, "OBSIDIAN_GIT": 1 }).subModule(["foreach", "--recursive", `tracking=$(git for-each-ref --format='%(upstream:short)' "$(git symbolic-ref -q HEAD)"); echo $tracking; if [ ! -z "$(git diff --shortstat $tracking)" ]; then git push -f; fi`], (err) => this.onError(err));
     }
     await this.git.env({ ...process.env, "OBSIDIAN_GIT": 1 }).push((err) => this.onError(err));
     return remoteChangedFiles;
