@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f965c1d40589daf7",
+        "id": "b234640cc4f16654",
         "type": "tabs",
         "children": [
           {
-            "id": "0c958e76d24d914e",
+            "id": "7ed794f458fa9af2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -72,28 +72,14 @@
               "icon": "lucide-bookmark",
               "title": "书签"
             }
-          }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 300
-  },
-  "right": {
-    "id": "48e9144ddfebddd5",
-    "type": "split",
-    "children": [
-      {
-        "id": "b66f9408fb996cf5",
-        "type": "tabs",
-        "children": [
+          },
           {
             "id": "6ce8a5e72cfd8854",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "欢迎.md",
+                "file": "source/_posts/readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +89,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "欢迎 的反向链接列表"
+              "title": "readme 的反向链接列表"
             }
           },
           {
@@ -112,12 +98,24 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "欢迎.md",
+                "file": "source/_posts/readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "欢迎 的出链列表"
+              "title": "readme 的出链列表"
+            }
+          },
+          {
+            "id": "3ac4b1072818e29c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "source/_posts/readme.md"
+              },
+              "icon": "lucide-list",
+              "title": "readme 的大纲"
             }
           },
           {
@@ -132,25 +130,48 @@
               "icon": "lucide-tags",
               "title": "标签"
             }
-          },
-          {
-            "id": "3ac4b1072818e29c",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "欢迎.md"
-              },
-              "icon": "lucide-list",
-              "title": "欢迎 的大纲"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 217.50260543823242,
     "collapsed": true
+  },
+  "right": {
+    "id": "48e9144ddfebddd5",
+    "type": "split",
+    "children": [
+      {
+        "id": "b66f9408fb996cf5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7188d9326df803bc",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {},
+              "icon": "history",
+              "title": "History"
+            }
+          },
+          {
+            "id": "6d27e2694ffb95e6",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 314.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,13 +180,14 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0c958e76d24d914e",
+  "active": "7ed794f458fa9af2",
   "lastOpenFiles": [
-    "source/_posts/readme - 副本.md",
     "source/_posts/readme.md",
+    "source/_posts/readme - 副本.md",
     "欢迎.md"
   ]
 }
