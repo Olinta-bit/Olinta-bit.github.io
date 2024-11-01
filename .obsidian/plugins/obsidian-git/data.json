@@ -1,5 +1,6 @@
 {
   "commitMessage": "vault backup: {{date}}",
+  "autoCommitMessage": "vault backup: {{date}}",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
   "autoSaveInterval": 15,
   "autoPushInterval": 0,
@@ -8,7 +9,6 @@
   "disablePush": false,
   "pullBeforePush": true,
   "disablePopups": false,
-  "disablePopupsForNoChanges": false,
   "listChangedFilesInMessageBody": false,
   "showStatusBar": true,
   "updateSubmodules": false,
@@ -24,6 +24,7 @@
   "refreshSourceControlTimer": 7000,
   "showBranchStatusBar": true,
   "setLastSaveToLastCommit": false,
+  "disablePopupsForNoChanges": false,
   "submoduleRecurseCheckout": false,
   "gitDir": "",
   "showFileMenu": true,
@@ -53,6 +54,5 @@
     "gutterSpacingFallbackLength": 5,
     "lastShownAuthorDisplay": "initials",
     "lastShownDateTimeFormatOptions": "date"
-  },
-  "autoCommitMessage": "vault backup: {{date}}"
+  }
 }
