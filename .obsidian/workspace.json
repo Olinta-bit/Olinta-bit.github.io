@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "scaffolds/post.md",
+                "file": "source/_posts/readme.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "post"
+              "title": "readme"
             }
           }
         ]
@@ -169,11 +169,13 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "1ccaa09bd95638c7",
+  "active": "79e992b9486315f7",
   "lastOpenFiles": [
+    "scaffolds/post.md",
     "scaffolds/page.md",
     "scaffolds/draft.md",
     "source/_posts/readme.md",

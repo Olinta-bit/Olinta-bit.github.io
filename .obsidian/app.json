@@ -4,5 +4,9 @@
   "attachmentFolderPath": "source/images",
   "newLinkFormat": "shortest",
   "useMarkdownLinks": true,
-  "propertiesInDocument": "visible"
+  "propertiesInDocument": "visible",
+  "newFileLocation": "current",
+  "strictLineBreaks": true,
+  "showLineNumber": true,
+  "rightToLeft": true
 }
