@@ -2,7 +2,7 @@
   "promptDelete": false,
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "source/images",
-  "newLinkFormat": "relative",
+  "newLinkFormat": "absolute",
   "useMarkdownLinks": true,
   "propertiesInDocument": "source",
   "newFileLocation": "current",
