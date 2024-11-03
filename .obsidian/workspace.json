@@ -140,24 +140,7 @@
   "right": {
     "id": "48e9144ddfebddd5",
     "type": "split",
-    "children": [
-      {
-        "id": "b66f9408fb996cf5",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "6d27e2694ffb95e6",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
-            }
-          }
-        ]
-      }
-    ],
+    "children": [],
     "direction": "horizontal",
     "width": 314.5,
     "collapsed": true
@@ -173,8 +156,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "79e992b9486315f7",
+  "active": "1ccaa09bd95638c7",
   "lastOpenFiles": [
+    "source/images/Pasted image 20241103165901.png",
+    "source/images/Pasted image 20241103165756.png",
     "scaffolds/post.md",
     "scaffolds/page.md",
     "scaffolds/draft.md",

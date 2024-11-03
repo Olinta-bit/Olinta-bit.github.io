@@ -2,11 +2,12 @@
   "promptDelete": false,
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "source/images",
-  "newLinkFormat": "shortest",
+  "newLinkFormat": "relative",
   "useMarkdownLinks": true,
-  "propertiesInDocument": "visible",
+  "propertiesInDocument": "source",
   "newFileLocation": "current",
   "strictLineBreaks": true,
   "showLineNumber": true,
-  "rightToLeft": true
+  "rightToLeft": false,
+  "showRibbon": false
 }
