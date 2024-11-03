@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/readme.md",
+                "file": "scaffolds/post.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "post"
             }
           }
         ]
@@ -151,8 +151,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "源代码控制"
+              "icon": "lucide-file",
+              "title": "插件不再活动"
             }
           }
         ]
@@ -174,10 +174,12 @@
   },
   "active": "1ccaa09bd95638c7",
   "lastOpenFiles": [
+    "scaffolds/page.md",
+    "scaffolds/draft.md",
+    "source/_posts/readme.md",
     "source/images/Pasted image 20241103133906.png",
     "source/images/Pasted image 20241103133758.png",
     "source/images",
-    "source/_posts/readme.md",
     "source/_posts/readme - 副本.md",
     "欢迎.md"
   ]
