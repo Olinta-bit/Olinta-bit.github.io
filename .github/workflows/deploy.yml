@@ -1,59 +1,43 @@
-name: Deploy Hexo to dev branch  
-on:  
-  push:  
-    branches:  
-      - "main"  
+name: Deploy hexo to dev branch
+on:
+  push:
+    branches:
+      - "main"
   
-jobs:  
-  build-and-deploy:  
-    runs-on: ubuntu-latest  
-    steps:  
-      - name: Checkout code
-        uses: actions/checkout@v3  
-        with:  
-          ref: "main"  
-      
-      - name: Setup Node.js environment  
-        uses: actions/setup-node@v3  
-        with:  
-          node-version: "14"  
-  
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v3
+        with:
+          ref: "main"
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+
       - name: Install dependencies using Yarn
-        run: yarn install
-  
+        uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: install
+
       - name: Check Yarn and Node version
-        run: |  
-          echo "Node version: $(node -v)"
-          echo "Yarn version: $(yarn -v)"
-  
-      - name: Build Hexo site  
-        run: |  
-          yarn clean  
-          yarn build  
-  
-      # 切换到 dev 分支  
-      - name: Checkout or create dev branch  
-        run: |  
-          git fetch origin dev || true  # 尝试获取 dev 分支，无需出错
-          git checkout -B dev           # 强制切换到 dev 分支
-  
-      # 设置 Git 用户信息  
-      - name: Set Git user info locally  
-        run: |  
-          git config user.name "Deploy Bot"  
-          git config user.email "deploy@example.com"  
-  
-      # 添加编译后的文件到 git 并提交  
-      - name: Add built files and commit  
-        run: |  
-          rm -rf *  # 清空当前目录  
-          cp -r public/. .  # 将 public 文件夹内容复制到根目录  
-          git add .  
-          git commit -m "Deploy Hexo site to dev branch" || echo "No changes to commit"  
-  
-      # 推送更改到 dev 分支  
-      - name: Push changes to dev branch  
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # 从 GitHub Secrets 中获取 Token
-        run: |  
-          git push https://$GH_TOKEN@github.com/Olinta-bit/Olinta-bit.github.io.git dev -f  # 强制推送确保更新
+        run: |
+          echo "Node version is `node -v`"
+          echo "Yarn version is `yarn -v`"
+
+      - name: Configure Git and Update Repo URL
+        run: |
+          git config --global user.name "Olint"
+          git config --global user.email "1@qq.com"
+          # 修改 _config.yml 中的仓库地址以支持 HTTPS
+          sed -i'' "s~git@github.com:~https://${{ secrets.GH_TOKEN }}@github.com/~" _config.yml
+
+      - name: Clean, Build, and Deploy
+        run: |
+          rm -rf .deploy_git  # 删除之前的 deploy 文件夹，确保干净的构建环境
+          yarn clean
+          yarn build
+          yarn deploy
