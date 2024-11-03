@@ -1,37 +1,43 @@
-name: Deploy hexo
-on:
-  push:
-    branches:
-      - "main"
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: "main"
-
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: "14"
-
-      - name: Setup yarn & Install node_modules
-        uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: install
-
-      - name: Check yarn & node version
-        run: |
-          echo "Node version is `node -v`"
-          echo "Yarn version is `yarn -v`"
-
-      - name: Build & Deploy
-        run: |
-          git config --global user.name "Olinta"
-          git config --global user.email "3178922405@qq.com"
-          sed -i'' "s~git@github.com:~https://${{ secrets.GH_TOKEN }}@github.com/~" _config.yml
-          rm -rf .deploy_git
-          yarn clean
-          yarn build
-          yarn deploy
+name: Deploy hexo to dev branch  
+on:  
+  push:  
+    branches:  
+      - "main"  
+  
+jobs:  
+  build-and-deploy:  
+    runs-on: ubuntu-latest  
+    steps:  
+      - uses: actions/checkout@v3  
+        with:  
+          ref: "main"  
+  
+      # ... 其他设置节点和安装依赖的步骤 ...  
+  
+      - name: Build Hexo  
+        run: |  
+          yarn clean  
+          yarn build  
+  
+      # 切换到 dev 分支  
+      - name: Checkout dev branch  
+        run: |  
+          git checkout -b dev || git checkout dev  # 如果 dev 分支已存在，则切换到它，否则创建它  
+  
+      # 设置本地 Git 用户信息  
+      - name: Set Git user info locally  
+        run: |  
+          git config user.name "Deploy Bot"  
+          git config user.email "deploy@example.com"  
+  
+      # 添加编译后的文件到 git 并提交  
+      - name: Add built files and commit  
+        run: |  
+          cp -r public/. .  # 假设编译输出在 public 文件夹，将其内容复制到根目录（根据需要调整）  
+          git add .  
+          git commit -m "Deploy Hexo site to dev branch" || true  # 使用 || true 来避免在没有更改时出错  
+  
+      # 推送更改到 dev 分支  
+      - name: Push changes to dev branch  
+        run: |  
+          git push https://${{ secrets.GH_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git dev
