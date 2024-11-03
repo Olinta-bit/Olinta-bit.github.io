@@ -30,8 +30,8 @@ jobs:
 
       - name: Configure Git and Update Repo URL
         run: |
-          git config --global user.name "Olint"
-          git config --global user.email "1@qq.com"
+          git config --global user.name "Olinta"
+          git config --global user.email "3178922405@qq.com"
           # 修改 _config.yml 中的仓库地址以支持 HTTPS
           sed -i'' "s~git@github.com:~https://${{ secrets.GH_TOKEN }}@github.com/~" _config.yml
 

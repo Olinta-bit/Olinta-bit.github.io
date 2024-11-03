@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Olinta 的笔记&博客网站
 subtitle: ''
-description: ''
+description: '存放笔记和博客的地方'
 keywords:
-author: John Doe
+author: Olinta
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://olinta-bit.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
