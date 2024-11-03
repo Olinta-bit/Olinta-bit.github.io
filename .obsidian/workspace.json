@@ -159,7 +159,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 314.5
+    "width": 314.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,6 +174,9 @@
   },
   "active": "1ccaa09bd95638c7",
   "lastOpenFiles": [
+    "source/images/Pasted image 20241103133906.png",
+    "source/images/Pasted image 20241103133758.png",
+    "source/images",
     "source/_posts/readme.md",
     "source/_posts/readme - 副本.md",
     "欢迎.md"
