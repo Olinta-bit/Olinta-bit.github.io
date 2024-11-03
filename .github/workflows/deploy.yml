@@ -55,4 +55,4 @@ jobs:
       # 推送更改到 dev 分支  
       - name: Push changes to dev branch  
         run: |  
-          git push https://${{ secrets.GH_TOKEN }}@github.com/Olinta-bit/Olinta-bit.github.io.git dev
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/Olinta-bit/Olinta-bit.github.io.git dev
