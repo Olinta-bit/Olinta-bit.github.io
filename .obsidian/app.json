@@ -9,5 +9,5 @@
   "strictLineBreaks": true,
   "showLineNumber": true,
   "rightToLeft": false,
-  "showRibbon": false
+  "showUnsupportedFiles": false
 }

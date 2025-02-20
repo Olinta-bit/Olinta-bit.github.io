@@ -40,10 +40,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -142,22 +143,25 @@
     "type": "split",
     "children": [],
     "direction": "horizontal",
-    "width": 314.5,
-    "collapsed": true
+    "width": 314.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "templater-obsidian:Templater": false
     }
   },
   "active": "1ccaa09bd95638c7",
   "lastOpenFiles": [
+    "scaffolds/post.md",
+    "scaffolds/page.md",
+    "scaffolds/draft.md",
+    "source/_posts/readme.md",
     "source/images/Pasted image 20241103174712.png",
     "images/Pasted image 20241103174648.png",
     "images",
@@ -165,16 +169,11 @@
     "source/_posts/images/Pasted image 20241103174406.png",
     "source/_posts/images",
     "source/_posts/Pasted image 20241103174250.png",
-    "source/_posts/readme.md",
     "source/images/Pasted image 20241103171723.png",
     "source/images/Pasted image 20241103171648.png",
     "source/images/Pasted image 20241103171531.png",
     "source/images/Pasted image 20241103171001.png",
     "source/images/Pasted image 20241103165901.png",
-    "source/images/Pasted image 20241103165756.png",
-    "scaffolds/post.md",
-    "scaffolds/page.md",
-    "scaffolds/draft.md",
     "source/images",
     "source/_posts/readme - 副本.md",
     "欢迎.md"
